@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+
+<body>
+    <div class="Section_top">
+        <div class="content">
+            <h1>Welcome <span>Check your Car Resale Value</span></h1>
+            <h3></h3>
+            <a href="predict"><strong>Check</strong></a>
+            <h3>
+                 With difficult economic conditions, it is likely that sales of second-hand imported (reconditioned) cars and used cars will increase.
+                 In many developed countries, it is common to lease a car rather than buying it outright.
+                 After the lease period is over, the buyer has the possibility to buy the car at its residual value, i.e. its expected resale value.
+                 Thus, it is of commercial interest to sellers/financers to be able to predict the salvage value (residual value) of cars with accuracy.
+                 We just need some of your information to predict the resale value of your car.
+            </h3>
+        </div>
+    </div>
+</body>
+
+</html>
+<style>
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+.Section_top{
+    width: 100%;
+    height: 200%;
+    overflow: hidden;
+    position: relative;
+    background-image: url("https://miro.medium.com/max/648/1*kQBj7l-Y1WPZfX9nKIYL1Q.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 10s infinite ease-in-out;
+}
+.content{
+    padding:20px;
+    background:rgb(0,0,0,0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+.content h3{
+    text-transform:none;
+    padding-top:20px;
+    text-align:justify;
+    font-size:22px;
+    color:white;
+}
+.content h1{
+    color: blue;
+    font-size: 60px;
+    letter-spacing: 7px;
+}
+.content h1 span{
+    color: white;
+}
+@keyframes hue {
+  from {
+        background-position:100% 200%;
+  }
+  to {
+        background-position:200% 100%;
+  }
+}
+.content a{
+    background: #85c1ee;
+    padding: 10px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.content a:hover{
+    color: #fff;
+    background-size:400% 400%;
+    background: linear-gradient(92deg, purple, blue);
+	animation: hue 10s infinite linear;
+}
+@keyframes change{
+    0%
+    {
+        background-image: url("https://miro.medium.com/max/1400/1*ftnM93QhlS0A7I55QegbrA.jpeg");
+    }
+    20%
+    {
+        background-image: url("https://repository-images.githubusercontent.com/499116129/ebf45738-0201-41d2-a851-84b0b8616d5a");
+    }
+    40%
+    {
+        background-image: url("https://aihubprojects.com/wp-content/uploads/2020/04/404ae051a8394694a750846b78499150_c242x0-1228x690-1.jpg");
+    }
+    60%
+    {
+        background-image: url("https://thenewdaily.com.au/wp-content/uploads/2020/10/1603332628-used-cars-edm.jpg?resize=960%2C540");
+    }
+    80%
+    {
+        background-image: url("https://www.financialexpress.com/wp-content/uploads/2020/11/car-rental-1.jpg");
+    }
+    100%
+    {
+        background-image: url("https://www.usnews.com/object/image/00000182-a54f-dc41-a1db-a56f1a8e0000/1_Alan_Powdrill_getty_images.jpg?update-time=&size=responsive640");
+    }
+}
+@media(max-width:100%){
+    body,style{
+        height: 200vh;
+    }
+}
+</style>
