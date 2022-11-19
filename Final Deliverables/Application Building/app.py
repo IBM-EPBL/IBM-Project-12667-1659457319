@@ -69,7 +69,7 @@ def y_predict():
 
 def predict(X):
     # NOTE: you must manually set API_KEY below using information retrieved from your IBM Cloud account.
-    API_KEY = "JtQPfzFB5KgpVUWPiAstI6QMb6UkpOqhsZMARqEN6l-N"
+    API_KEY = "RtTfNjm2zENTuNTMOO2d6meo07NPaYavh9eIJvEZwMs3"
     token_response = requests.post('https://iam.cloud.ibm.com/identity/token', data={"apikey":
                                                                                      API_KEY, "grant_type": 'urn:ibm:params:oauth:grant-type:apikey'})
     mltoken = token_response.json()["access_token"]
@@ -81,7 +81,7 @@ def predict(X):
     payload_scoring = {"input_data": [{"field": ["vehicleType", "yearOfRegistration", "gearbox", "powerPS", "model", "kilometer", "monthOfRegistration", "fuelType", "brand", "notRepairedDamage"
                                                  ], "values": [X]}]}
 
-    response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/ml/v4/deployments/6eba86d1-5b6b-40a7-8893-92fdbaeb7e9e/predictions?version=2022-11-16', json=payload_scoring,
+    response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/ml/v4/deployments/ab2cf516-865c-42d6-9e70-2b35dcdd9ad6/predictions?version=2022-11-18', json=payload_scoring,
                                      headers={'Authorization': 'Bearer ' + mltoken})
     # print("Scoring response")
     # print(response_scoring.json())
